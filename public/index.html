@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="webmanifest" href="./manifest.json">
+  <title>Fast Food Delivery</title>
+</head>
+<body>
+  <header>
+    <h1>🍽 Fast Food</h1>
+    <nav>
+      <a href="#menu">Меню</a>
+      <a href="#cart">Корзина</a>
+      <a href="#order">Оформить заказ</a>
+    </nav>
+  </header>
+
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu_items">
+      <div class="item">
+        <img src="" alt="Пицца">
+        <h3>Pizza Margarita</h3>
+        <p>Price: 4$</p>
+        <button onclick="addToCart('Pizza Margarita', 4)">Add</button>
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Бургер">
+        <h3>Burger Classic</h3>
+        <p>Price: 2.5$</p>
+        <button onclick="addToCart('Burger Classic', 2.5)">Add</button>
+      </div>
+      <!-- Добавь ещё блюда -->
+    </div>
+  </section>
+
+  <section id="cart" class="cart">
+    <h2>Корзина</h2>
+    <ul id="cart_items"></ul>
+    <p>Total price: <span id="total">0</span>$</p>
+  </section>
+
+  <section id="order" class="order_form">
+    <h2>Placin an order</h2>
+    <form onsubmit="submitOrder(event)">
+      <input type="text" placeholder="Your name" required />
+      <input type="tel" placeholder="Phone number" required />
+      <input type="text" placeholder="Adress delivery" required />
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Fast Food Delivery</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
